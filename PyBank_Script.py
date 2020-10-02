@@ -2,7 +2,7 @@ import os
 import csv
 # import csv file into script
 pyBank = os.path.join("budget_data.csv")
-print(pyBank)
+
     
 profit = []
 monthlyChange = []
