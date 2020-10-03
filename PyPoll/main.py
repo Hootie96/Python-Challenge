@@ -31,15 +31,26 @@ with open(pyPoll, newline="") as csvfile:
     #z percentage of votes won
         z = (y/count)*100
         votePercentage.append(z)
+   # calculate winner by finding the max voteCount
     winningCount = max(voteCount)
     winner = candidateName[voteCount.index(winningCount)]
+# print out results into terminal
+print("Election Results")
+print('-----------------')
+print("Total Votes:" + str(voteCount))
+# I need to set up a for loop to iterate through the candidate list
+for i in range(len(candidateName)):
+    print(candidateName[i] + ": " + str(votePercentage[i]) + "% ("+ str(voteCount[i])+ ")")
+print("winner is: " + winner)
+
+with open('electionResults.txt', 'w') as text:
+    text.write("Election Results\n")
+    text.write("--------------------\n")
+    text.write("Total VOtes: " + str(voteCount) + "\n")
+    for i in range(len(candidateName)):
+        text.write(candidateName[i] + ": " + str(votePercentage[i]) + "% ("+ str(voteCount[i])+ ")\n")
+    text.write("The Winner is: " + winner + "\n")
+    text.write("-----------------------")
 
 
-# percentage of votes each candidate won (percent of votes = % won / total)
-# count how many votes each candidate won
-# max votes from count = winner
-
-# make a table that displays top 4 candidates, their percentage of votes, and total votes
-
-# display winner at the bottom
-
+    
