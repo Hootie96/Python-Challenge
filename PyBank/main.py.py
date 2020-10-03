@@ -1,7 +1,7 @@
 import os
 import csv
 # import csv file into script
-pyBank = r'C:\Users\kaleb\Documents\AirAce Docs\Payroll 2020\Python-Challenge\PyBank\budget_data.csv'
+pyBank = r'C:\Users\Kaleb\Python-Challenge\PyBank\budget_data.csv'
 
 # define the lists to append 
 profit = []
